@@ -129,7 +129,7 @@ test('restaurant can have many menus', async()=> {
     //magic sequelize add method
     await testRestaurant.addMenu(testMenu1)
     await testRestaurant.addMenu(testMenu2)
-    const menuList = await testRestaurant.getMenu()
+    const menuList = await testRestaurant.getMenus()
     expect(menuList.length).toBe(2) 
     //assert that the 0th index of the array menuList is an instance of the model Restaurant
     expect(menuList[0] instanceof Menu).toBeTruthy()
